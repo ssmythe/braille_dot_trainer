@@ -1,57 +1,39 @@
 #!/usr/bin/env python
 
-
 import random
-
 
 def braille_trainer():
     braille_dict = {
-        "a": "1",
-        "b": "12",
-        "c": "14",
-        "d": "145",
-        "e": "15",
-        "f": "124",
-        "g": "1245",
-        "h": "125",
-        "i": "24",
-        "j": "245",
+        "u": "136",
+        "v": "1236",
+        "w": "2456",
+        "x": "1346",
+        "y": "13456",
+        "z": "1356",
     }
     word_list = [
-        "acid",
-        "acacia",
-        "badge",
-        "beige",
-        "babe",
-        "cage",
-        "deface",
-        "dice",
-        "ebb",
-        "egg",
-        "fad",
-        "fife",
-        "gag",
-        "gage",
-        "hag",
-        "hajji",
-        "hide",
-        "hi",
-        "id",
-        "if",
-        "idea",
-        "jag",
-        "jade",
+        "wux",
+        "vux",
+        "zux",
+        "xyzz",
+        "uv",
+        "wvy",
+        "yx",
+        "zwy",
+        "wxy",
+        "zwyx",
     ]
     remaining_words = set(word_list)
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Dot Word Trainer - Enter the dot numbers for each letter separated by a space. Press Enter to quit."
+        "Braille u-z Dot Word Trainer - Enter the dot numbers for each letter separated by a space. Press Enter to quit."
     )
 
     while remaining_words:
         word = random.choice(list(remaining_words))
+        # Build the dot representation for the word by looking up each letter.
         dot_representation = " ".join(braille_dict[letter] for letter in word)
         user_input = input(f"Word '{word}': ")
 
@@ -73,7 +55,6 @@ def braille_trainer():
         )
     else:
         print("\nNo attempts made.")
-
 
 if __name__ == "__main__":
     braille_trainer()

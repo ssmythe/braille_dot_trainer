@@ -1,28 +1,22 @@
 #!/usr/bin/env python
 
-
 import random
-
 
 def braille_trainer():
     braille_dict = {
-        "a": "1",
-        "b": "12",
-        "c": "14",
-        "d": "145",
-        "e": "15",
-        "f": "124",
-        "g": "1245",
-        "h": "125",
-        "i": "24",
-        "j": "245",
+        "u": "136",
+        "v": "1236",
+        "w": "2456",
+        "x": "1346",
+        "y": "13456",
+        "z": "1356",
     }
     remaining_letters = set(braille_dict.keys())
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Dot Trainer - Enter the dot numbers for the given letter. Press Enter to quit."
+        "Braille u-z Dot Trainer - Enter the dot numbers for the given letter. Press Enter to quit."
     )
 
     while remaining_letters:
@@ -48,7 +42,6 @@ def braille_trainer():
         )
     else:
         print("\nNo attempts made.")
-
 
 if __name__ == "__main__":
     braille_trainer()

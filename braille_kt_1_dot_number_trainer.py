@@ -1,28 +1,27 @@
 #!/usr/bin/env python
 
-
 import random
 
 
 def braille_trainer():
     braille_dict = {
-        "a": "1",
-        "b": "12",
-        "c": "14",
-        "d": "145",
-        "e": "15",
-        "f": "124",
-        "g": "1245",
-        "h": "125",
-        "i": "24",
-        "j": "245",
+        "k": "13",
+        "l": "123",
+        "m": "134",
+        "n": "1345",
+        "o": "135",
+        "p": "1234",
+        "q": "12345",
+        "r": "1235",
+        "s": "234",
+        "t": "2345",
     }
     remaining_letters = set(braille_dict.keys())
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Dot Trainer - Enter the dot numbers for the given letter. Press Enter to quit."
+        "Braille k-t Dot Trainer - Enter the dot numbers for the given letter. Press Enter to quit."
     )
 
     while remaining_letters:

@@ -1,28 +1,27 @@
 #!/usr/bin/env python
 
-
 import random
 
 
 def braille_trainer():
     braille_dict = {
-        "a": "\u2801",
-        "b": "\u2803",
-        "c": "\u2809",
-        "d": "\u2819",
-        "e": "\u2811",
-        "f": "\u280b",
-        "g": "\u281b",
-        "h": "\u2813",
-        "i": "\u280a",
-        "j": "\u281a",
+        "k": "\u2805",
+        "l": "\u2807",
+        "m": "\u280d",
+        "n": "\u281d",
+        "o": "\u2815",
+        "p": "\u280f",
+        "q": "\u281f",
+        "r": "\u2817",
+        "s": "\u280e",
+        "t": "\u281e",
     }
     remaining_chars = set(braille_dict.keys())
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Character Trainer - Identify the letter corresponding to the given Braille character. Press Enter to quit."
+        "Braille k-t Character Trainer - Identify the letter corresponding to the given Braille character. Press Enter to quit."
     )
 
     while remaining_chars:

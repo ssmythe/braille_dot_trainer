@@ -1,28 +1,22 @@
 #!/usr/bin/env python
 
-
 import random
-
 
 def braille_trainer():
     braille_dict = {
-        "a": "\u2801",
-        "b": "\u2803",
-        "c": "\u2809",
-        "d": "\u2819",
-        "e": "\u2811",
-        "f": "\u280b",
-        "g": "\u281b",
-        "h": "\u2813",
-        "i": "\u280a",
-        "j": "\u281a",
+        "u": "\u2825",
+        "v": "\u2827",
+        "w": "\u283a",
+        "x": "\u282d",
+        "y": "\u283d",
+        "z": "\u2835",
     }
     remaining_chars = set(braille_dict.keys())
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Character Trainer - Identify the letter corresponding to the given Braille character. Press Enter to quit."
+        "Braille u-z Character Trainer - Identify the letter corresponding to the given Braille character. Press Enter to quit."
     )
 
     while remaining_chars:
@@ -34,7 +28,7 @@ def braille_trainer():
             break
 
         total_attempts += 1
-        if user_input == letter:
+        if user_input.lower() == letter:
             print("✔ Correct!")
             correct_attempts += 1
             remaining_chars.remove(letter)
@@ -48,7 +42,6 @@ def braille_trainer():
         )
     else:
         print("\nNo attempts made.")
-
 
 if __name__ == "__main__":
     braille_trainer()

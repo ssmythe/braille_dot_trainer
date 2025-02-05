@@ -5,16 +5,6 @@ import random
 
 def braille_trainer():
     braille_dict = {
-        "a": "\u2801",
-        "b": "\u2803",
-        "c": "\u2809",
-        "d": "\u2819",
-        "e": "\u2811",
-        "f": "\u280b",
-        "g": "\u281b",
-        "h": "\u2813",
-        "i": "\u280a",
-        "j": "\u281a",
         "k": "\u2805",
         "l": "\u2807",
         "m": "\u280d",
@@ -25,48 +15,47 @@ def braille_trainer():
         "r": "\u2817",
         "s": "\u280e",
         "t": "\u281e",
-        "u": "\u2825",
-        "v": "\u2827",
-        "w": "\u283a",
-        "x": "\u282d",
-        "y": "\u283d",
-        "z": "\u2835",
     }
     word_list = [
-        "acid",
-        "acacia",
-        "badge",
-        "beige",
-        "babe",
-        "cage",
-        "deface",
-        "dice",
-        "ebb",
-        "egg",
-        "fad",
-        "fife",
-        "gag",
-        "gage",
-        "hag",
-        "hajji",
-        "hide",
-        "hi",
-        "id",
-        "if",
-        "idea",
-        "jag",
-        "jade",
+        "look",
+        "took",
+        "tool",
+        "loop",
+        "molt",
+        "toll",
+        "knot",
+        "not",
+        "ton",
+        "pot",
+        "top",
+        "slot",
+        "stool",
+        "monk",
+        "pork",
+        "torn",
+        "storm",
+        "romp",
+        "mop",
+        "prom",
+        "pronk",
+        "knoll",
+        "troll",
+        "sort",
+        "port",
+        "sport",
     ]
+
     remaining_words = set(word_list)
     total_attempts = 0
     correct_attempts = 0
 
     print(
-        "Braille a-j Word Trainer - Identify the word corresponding to the given Braille characters. Press Enter to quit."
+        "Braille k-t Word Trainer - Identify the word corresponding to the given Braille characters. Press Enter to quit."
     )
 
     while remaining_words:
         word = random.choice(list(remaining_words))
+        # Build the Braille representation for the word.
         braille_word = "".join(braille_dict[letter] for letter in word)
         user_input = input(f"Word '{braille_word}': ")
 
